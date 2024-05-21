@@ -1,0 +1,19 @@
+def
+closest_ pair_divide_and_conquer(points list[tuple(float. float]]) - tuple[float. tuple[tuple[float, float], tuple[float. floatill
+••••
+Find the closest pair of points using the divide-and-conquer approach.
+Args
+points A list of 2D points.
+Returns
+A tuple containing the minimum distance and the closest pair of points.
+if len(points) = 3
+return closest pair_brute_force(points)
+mid - len(points)  2
+left points = pointsmid]
+right points - points(mid]
+left_dist. left_closest pair - closest_ pair_divide_and_conquer(left_points) right_dist, right_closest_pair - closest_ pair_divide_and_conquer (right_points)
+min dist - min(left_ dist. right_dist)
+closest_pair - left_closest_pair if min_dist == left_dist else right_closest_pair mid strip - [point for point in points if abs(point[0] - points(mid(01)  min_dist] strip_dist, strip_closest_pair - closest_pair_strip(mid_strip, min_dist)
+if strip_dist  min_dist
+min dist - strip_dist closest pair - strip_closest pair
+return min_dist, closest_pair
